@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Notes from the antenatal course's birth videos: key messages, per-video notes, comfort options and the decisions to make.">
+<meta name="robots" content="noindex, nofollow">
+<title>Birth Plan Video Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Young+Serif&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #F3F5F6;
+    --surface: #FFFFFF;
+    --ink: #1D2A33;
+    --muted: #56636E;
+    --rule: #D6DDE2;
+    --accent: #1C6570;
+    --accent-tint: #E2EEEF;
+    --amber: #8F5E10;
+    --alert: #A3392B;
+    --alert-tint: #F8E9E6;
+    --display: "Young Serif", Georgia, "Times New Roman", serif;
+    --body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0F161C;
+      --surface: #151F27;
+      --ink: #E3E8EB;
+      --muted: #98A5AE;
+      --rule: #26333D;
+      --accent: #72C2C8;
+      --accent-tint: #16303A;
+      --amber: #E2AA55;
+      --alert: #EE8A78;
+      --alert-tint: #2E1D1A;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0F161C;
+    --surface: #151F27;
+    --ink: #E3E8EB;
+    --muted: #98A5AE;
+    --rule: #26333D;
+    --accent: #72C2C8;
+    --accent-tint: #16303A;
+    --amber: #E2AA55;
+    --alert: #EE8A78;
+    --alert-tint: #2E1D1A;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    padding-inline: 20px;
+  }
+  .wrap { max-width: 50rem; margin-inline: auto; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+  strong { font-weight: 700; }
+
+  .masthead { padding-block: 3rem 1.75rem; }
+  .eyebrow {
+    margin: 0;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(2.2rem, 7vw, 3.3rem);
+    line-height: 1.08;
+    letter-spacing: -.01em;
+    text-wrap: balance;
+    margin: .5rem 0 1rem;
+  }
+  .lede { font-size: 1.2rem; line-height: 1.5; max-width: 36em; margin: 0 0 1rem; }
+  .meta { margin: 0; color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; }
+
+  .toc {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 5;
+    background: var(--bg);
+    border-block: 1px solid var(--rule);
+  }
+  .toc ul {
+    list-style: none;
+    margin: 0;
+    padding: .55rem 0;
+    display: flex;
+    gap: .4rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .toc ul::-webkit-scrollbar { display: none; }
+  .toc a {
+    display: block;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--ink);
+    padding: .3rem .75rem;
+    border-radius: 999px;
+    border: 1px solid var(--rule);
+    background: var(--surface);
+  }
+  .toc a:hover { border-color: var(--accent); color: var(--accent); }
+
+  section { padding-block: 2.75rem .5rem; scroll-margin-top: 3.75rem; }
+  h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(1.6rem, 4.5vw, 2rem);
+    line-height: 1.2;
+    text-wrap: balance;
+    margin: .3rem 0 .4rem;
+  }
+  .sub { color: var(--muted); margin: 0 0 1.5rem; max-width: 40em; }
+
+  /* Key messages */
+  .keys {
+    list-style: none;
+    margin: 0;
+    padding: 1.4rem;
+    display: grid;
+    gap: 1.1rem 2rem;
+    background: var(--accent-tint);
+    border-radius: 8px;
+  }
+  .keys li { padding-left: 1.1rem; position: relative; }
+  .keys li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .62em;
+    width: .45rem;
+    height: .45rem;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .keys strong { display: block; }
+  @media (min-width: 720px) { .keys { grid-template-columns: 1fr 1fr; padding: 1.75rem; } }
+
+  /* Videos */
+  .vid { padding-block: 1.15rem; border-top: 1px solid var(--rule); scroll-margin-top: 3.75rem; }
+  .vid-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+  .vid h3 { font-size: 1.12rem; line-height: 1.35; margin: 0; }
+  .dur {
+    flex: none;
+    font-size: .85rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .vid ul { margin: .55rem 0 0; padding-left: 1.2rem; display: grid; gap: .45rem; }
+  .vid li::marker { color: var(--accent); }
+  .vid p { margin: .45rem 0 0; }
+  .vid.minor p { color: var(--muted); }
+  .golden { color: var(--amber); font-weight: 700; }
+
+  .callout {
+    margin-top: .9rem;
+    padding: .9rem 1.1rem 1rem;
+    border: 1px solid var(--alert);
+    background: var(--alert-tint);
+    border-radius: 6px;
+  }
+  .callout .callout-label {
+    margin: 0 0 .45rem;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--alert);
+  }
+  .callout ul { display: block; columns: 2 15rem; column-gap: 1.75rem; margin: 0; }
+  .callout li { break-inside: avoid; margin-bottom: .3rem; }
+  .callout li::marker { color: var(--alert); }
+  .callout .after { margin: .5rem 0 0; font-size: .95rem; }
+
+  /* Comfort options */
+  .grid-head { display: none; }
+  .row { display: grid; gap: .35rem; padding-block: .95rem; border-top: 1px solid var(--rule); }
+  .row:last-child { border-bottom: 1px solid var(--rule); }
+  .name { font-weight: 700; }
+  .onset {
+    display: inline-block;
+    margin-top: .3rem;
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 1.4;
+    padding: .12rem .55rem;
+    border-radius: 10px;
+    background: var(--accent-tint);
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .lbl {
+    display: block;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .note { color: var(--muted); }
+  @media (min-width: 760px) {
+    .grid-head, .row { grid-template-columns: 12.5rem 1fr 1.25fr; gap: 1.5rem; }
+    .grid-head {
+      display: grid;
+      padding-block: 0 .45rem;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .row .lbl { display: none; }
+    .choices .grid-head, .choices .row { grid-template-columns: 12.5rem 1fr 1fr; }
+  }
+
+  /* Choices */
+  .stage { margin-top: 1.9rem; }
+  .stage h3 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin: 0 0 .5rem;
+    color: var(--accent);
+  }
+  .stage.after h3 { color: var(--amber); }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-block: 1.5rem 3.5rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: .92rem;
+  }
+  footer p { margin: 0 0 .5rem; max-width: 42em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <p class="eyebrow">Antenatal course notes · Weeks one and two</p>
+    <h1>Birth Plan Video Notes</h1>
+    <p class="lede">Write short birth preferences that cover every way your baby could arrive, and treat every intervention as an offer you weigh up, not an instruction.</p>
+    <p class="meta">20 videos · about 1 hr 50 min · 26 September 2026</p>
+  </header>
+
+  <nav class="toc" aria-label="Sections">
+    <ul>
+      <li><a href="#key">Key messages</a></li>
+      <li><a href="#week-one">Week one</a></li>
+      <li><a href="#week-two">Week two</a></li>
+      <li><a href="#comfort">Comfort options</a></li>
+      <li><a href="#choices">Choices</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="key" aria-labelledby="key-h">
+      <h2 id="key-h">Key messages</h2>
+      <p class="sub">The points that run through all the videos.</p>
+      <ul class="keys">
+        <li><strong>Plan for every route, not one.</strong> Obstetricians are involved in more than half of births, and the hardest decisions are the ones people first meet mid-labour. Cover induction, assisted birth and caesarean as well as a straightforward vaginal birth; keep it to short bullets, put it in the notes and tell the team it's there.</li>
+        <li><strong>Everything is optional, so use BRAIN.</strong> Monitoring, vaginal exams, sweeps, induction, the placenta injection, episiotomy, forceps/ventouse and caesarean all need consent. Ask about Benefits, Risks, Alternatives, your Instinct, and what happens if you do Nothing (or wait).</li>
+        <li><strong>Calm changes the physiology.</strong> Feeling safe keeps oxytocin (effective surges) and endorphins (natural pain relief) flowing; fear and disturbance release adrenaline, which can slow labour and heighten pain. Lighting, sound, who's in the room and how people speak to you are worth planning.</li>
+        <li><strong>Upright, forward, open (UFO).</strong> These positions give up to 28% more room in the pelvis and are linked to shorter labours and fewer assisted births and episiotomies. You don't have to lie on your back; even with an epidural you can be helped into UFO positions.</li>
+        <li><strong>Breathing is the core skill, and it needs practice.</strong> Up-breathing (in for 4, out for 8) through surges and during a caesarean; down-breathing for pushing. The partner can breathe or count along.</li>
+        <li><strong>Find out now what your birth place offers.</strong> Availability shapes your options: birth pools (limited), wireless or waterproof monitoring, water injections, remifentanil, how many birth partners are allowed, and gentle-caesarean practices.</li>
+      </ul>
+    </section>
+
+    <section id="week-one" aria-labelledby="w1-h">
+      <p class="eyebrow">Week one</p>
+      <h2 id="w1-h">Preparing for birth</h2>
+      <p class="sub">Figures are as quoted by the course's midwife and obstetrician; check anything specific to you with your own midwife.</p>
+
+      <article class="vid">
+        <div class="vid-head"><h3>Preparing for birth</h3><span class="dur">6:38</span></div>
+        <ul>
+          <li>Five Os for birth preferences: be <strong>Open</strong> to change, know your <strong>Options</strong> from evidence (not social media), get <strong>Organised</strong> (visit or video-tour the birth place), make it your <strong>Own</strong>, and keep it <strong>Obvious</strong>, meaning short bullets the team can scan.</li>
+          <li>Pack bags by 37 weeks; don't use a planned caesarean date as the deadline. Pack three: labour, mum after the birth, baby (still worth it for a home birth, in case of transfer).</li>
+          <li>Put baby's first outfit (nappy, vest, babygrow, hat) in one labelled bag, as the midwife asks for it before the birth. Charge the TENS, phones and camera beforehand, and only bring what you can carry from the car in one trip.</li>
+        </ul>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>An overview of labour</h3><span class="dur">4:09</span></div>
+        <ul>
+          <li>Under 5% of babies arrive on their due date, and first-time mums go into labour at 40+4 on average. Think of a 37–42 week window and be vague with others about the date.</li>
+          <li>Latent phase (0–4 cm): irregular, stop-start surges for hours or days. Active phase (4–10 cm): 8–18 hours for a first birth, 5–12 hours after a previous vaginal birth.</li>
+          <li>Pushing takes minutes to 3 hours for a first vaginal birth (up to 2 hours after that). The placenta usually follows within 30 minutes with the oxytocin injection, or within an hour without.</li>
+        </ul>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>The first stage of labour</h3><span class="dur">11:55</span></div>
+        <ul>
+          <li>Waters may trickle, break late or not break at all, so intact waters don't rule out labour. If they go: note the time, wear a pad, check the colour (clear, straw or pinkish is normal; green or brown means meconium and extra monitoring; fresh red blood is urgent) and the smell (foul can mean infection), then call.</li>
+          <li>Established labour means surges of 40–60 seconds, about 3 in 10 minutes, that stop you in your tracks. If you can still chat or load the washing machine, it probably isn't active labour yet.</li>
+          <li>The mucus plug can come away days or weeks early; no need to call unless there's fresh red blood.</li>
+          <li>Baby's heart: intermittent handheld checks (every 15 minutes, every 5 when pushing) keep you mobile. Continuous CTG is advised with an epidural, induction, high blood pressure, infection, bleeding or meconium; ask whether wireless or waterproof CTG is available.</li>
+          <li>Vaginal exams are offered to confirm active labour, then every 4 hours, and are optional. They're a snapshot, not a forecast: 3 cm twice, then a baby a couple of hours later, is normal. Ask how to keep them from disrupting you, e.g. leaving the pool.</li>
+        </ul>
+        <div class="callout" role="note" aria-label="When to call the midwife">
+          <p class="callout-label">Call the midwife if</p>
+          <ul>
+            <li>Strong, regular surges about a minute long, at least every 5 minutes</li>
+            <li>Your waters break</li>
+            <li>Any signs of labour before 37 weeks</li>
+            <li>Baby is moving less</li>
+            <li>Any bleeding</li>
+            <li>Severe headache, or new swelling of the face, hands or legs</li>
+            <li>Itchy hands and feet</li>
+            <li>Constant tummy pain</li>
+            <li>You're not coping at home</li>
+          </ul>
+          <p class="after">Save the numbers in your phone now, and have backup numbers (e.g. colleagues) to reach the birth partner at work.</p>
+        </div>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>The second stage of labour</h3><span class="dur">2:03</span></div>
+        <ul>
+          <li>Follow the urge to bear down; with an epidural the midwife will coach you.</li>
+          <li>Use any upright, forward, open position, such as squatting or all fours, or lie on your side if tired (the tailbone can still move). With an epidural, ask to be helped into these positions.</li>
+          <li>Down-breathe and keep the pelvic floor soft. Touching baby's head, or seeing it in a mirror, helps with the final pushes. Perineal protection options: warm compress, hands-on support, slower coached pushes.</li>
+        </ul>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>The third stage of labour</h3><span class="dur">2:42</span></div>
+        <ul>
+          <li>Delayed (optimal) cord clamping, waiting until the cord stops pulsing and turns white, gives baby more blood and iron.</li>
+          <li>The <span class="golden">golden hour</span>: uninterrupted skin-to-skin and a first feed, with non-urgent checks postponed.</li>
+          <li>The optional oxytocin injection cuts the chance of losing more than a litre of blood by about a third and speeds up the placenta; some people get nausea or stronger afterpains.</li>
+          <li>Tell the midwife beforehand if you want to keep the placenta or collect cord blood.</li>
+        </ul>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>When you might meet a doctor</h3><span class="dur">3:08</span></div>
+        <ul>
+          <li>"Your body, your rules": nothing happens without your consent, and you should be told all the options.</li>
+          <li>Use BRAIN for every decision; for your own research, stick to the NHS, NICE, RCM, RCOG and Cochrane.</li>
+        </ul>
+      </article>
+
+      <article class="vid" id="induction">
+        <div class="vid-head"><h3>Induction</h3><span class="dur">7:56</span></div>
+        <ul>
+          <li>Offered for concerns about baby (fewer movements, slow growth, waters broken without surges), your health (pre-eclampsia, gestational diabetes, obstetric cholestasis) or risk factors (going overdue, twins, BMI, age, IVF). You should be given time to decide.</li>
+          <li>Up to three steps, each only if the last didn't start labour: (1) soften the cervix with a prostaglandin gel, pessary or tablet, or a balloon or rods, the longest step at 12–48 hours and sometimes partly at home; (2) break the waters; (3) an oxytocin drip set to 3–4 surges per 10 minutes, with continuous monitoring, usually the most intense part.</li>
+          <li>Always in hospital, and surges can build faster. At term it doesn't raise the chance of a caesarean or assisted birth (after 41 weeks it may lower the caesarean rate), though epidurals become more likely, which slightly raises assisted births.</li>
+          <li>Membrane sweep (no drugs): offered around the due date for a first baby, around 41 weeks otherwise. Across 40+ studies (about 7,000 women) it made spontaneous labour slightly more likely and formal induction slightly less; it works best if the cervix is already softening. You can ask them to stop at any point.</li>
+          <li>Waiting past 41 weeks, per NICE, for every 1,000 women: 36 more caesareans, 13 more neonatal unit admissions and 3 more stillbirths than with induction. Declining is your call; expect extra monitoring and scans, or you can ask for a caesarean.</li>
+        </ul>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>Caesarean / abdominal birth</h3><span class="dur">11:26</span></div>
+        <ul>
+          <li>About 1 in 10 pregnancies have a planned caesarean (choice, breech or sideways baby, placenta praevia, previous caesarean, medical reasons). Every unplanned one is officially an "emergency", but most are calm, with time to discuss.</li>
+          <li>Planned day: pre-op assessment (bloods, swabs, consent), antibacterial wash, antacid and anti-sickness tablets, fasting instructions; arrive early and expect to wait. You're usually awake with a spinal and feel pressure but nothing sharp; baby arrives within 5–10 minutes and the whole operation takes 40–60.</li>
+          <li>Gentle caesarean: ask for music, dimmed room lights, monitors on your side so your chest is free, the drape lowered (and your head raised) to watch, a slow birth, delayed cord clamping and immediate skin-to-skin; the partner can trim the cord. Wear the gown backwards or loose, and keep a phone or camera in the partner's scrubs.</li>
+          <li>You can request a caesarean; a doctor will discuss your reasons. The video quotes urinary incontinence lasting over a year at about 1 in 4 after a caesarean vs 1 in 2 after a vaginal birth.</li>
+          <li>Risks: about 6 weeks' recovery; wound or womb infection about 2 in 100; clots; heavy bleeding; hysterectomy about 1 in 670 (vs about 1 in 1,250 after a vaginal birth); injury to the bladder or ureters. For baby: temporary breathing difficulty, occasionally a small nick that heals quickly.</li>
+          <li>If labour starts before a planned caesarean: booked for a medical reason, come in for an unplanned caesarean; booked by choice, you can reassess and pick either route.</li>
+        </ul>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>Assisted birth</h3><span class="dur">8:14</span></div>
+        <ul>
+          <li>Forceps or ventouse during pushing, more common in first births, for baby's position, distress or exhaustion. An epidural raises the chance by about 4 in 100.</li>
+          <li>You'll be on your back; it still needs your contractions and pushes, and a paediatrician attends. It may happen in theatre if it might not work, so a caesarean can follow. Forceps are likelier if baby's head is higher or less tucked; ventouse if it's low.</li>
+          <li>Third/fourth-degree tears: about 3 in 100 without help, 4 in 100 with ventouse, 10 in 100 with forceps. Heavier bleeding is more common, and clots and incontinence slightly more likely (ask for physio). Baby may have pressure marks for 48–72 hours and a slightly higher chance of jaundice.</li>
+          <li>Less likely to work if BMI is over 30, baby is over 4 kg, back-to-back or still high. A caesarean at this stage is more complex and can be riskier, so if you'd never want forceps or ventouse, discuss it before labour.</li>
+        </ul>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>Tears and episiotomy</h3><span class="dur">5:21</span></div>
+        <ul>
+          <li>About 9 in 10 first-time vaginal births involve a tear, graze or episiotomy, mostly minor. Second-degree tears (skin and muscle) usually need stitches; third/fourth-degree (about 3 in 100) reach the back-passage muscle and are repaired in theatre.</li>
+          <li>Episiotomy isn't routine: it's offered to avoid a likely severe tear, to speed up the birth of a distressed baby, or with forceps/ventouse. It takes about a month to heal, slower than a second-degree tear but faster than a third/fourth-degree one, which it doesn't always prevent.</li>
+          <li>To lower the risk: perineal massage in pregnancy, a warm compress, and a slower birth of the head.</li>
+        </ul>
+      </article>
+
+      <article class="vid minor">
+        <div class="vid-head"><h3>Resources</h3><span class="dur">6:16</span></div>
+        <p>Eight short birth clips (vaginal, abdominal, golden hour) with no captions, so they aren't summarised here. The same page has the Birth Preferences Template, Birth Bag Checklist and Shopping List PDFs.</p>
+      </article>
+    </section>
+
+    <section id="week-two" aria-labelledby="w2-h">
+      <p class="eyebrow">Week two</p>
+      <h2 id="w2-h">Making your birth the best it can be</h2>
+      <p class="sub">Hypnobirthing, positions, breathing and your environment.</p>
+
+      <article class="vid">
+        <div class="vid-head"><h3>Introducing hypnobirthing</h3><span class="dur">9:31</span></div>
+        <ul>
+          <li>Not hypnosis, and not only for drug-free or vaginal births: it's preparation for any birth, built with the course's midwives and obstetricians.</li>
+          <li>Labour runs on hormones. Safe and calm brings oxytocin and endorphins; fear brings adrenaline, which diverts blood from the womb, slows surges and makes them hurt more. Arriving at hospital anxious can slow labour down.</li>
+          <li>Seven tools, "MY BIRTH": Mindset, Your body, Breathing, Informed choice, Relaxations, Trusted team, Home comforts. They only work with practice.</li>
+        </ul>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>Mindset</h3><span class="dur">6:49</span></div>
+        <ul>
+          <li>Most birth fear comes from TV, edited documentaries and other people's stories. If there's been a difficult birth before, debrief it with the medical team.</li>
+          <li>Swap in positive birth photos, videos and stories, and politely stop anyone mid-horror-story.</li>
+          <li>Mind the language: "Are you comfortable?" rather than "Are you in pain?"; "surge" or "wave" rather than "contraction"; "abdominal birth" rather than "C-section".</li>
+          <li>Make a strategy list (each worry, then what you'll do about it) and pick affirmations, e.g. "I can do anything for 60 seconds": at 3 surges per 10 minutes, about 7 minutes in every 10 are rest. Share the ones that work with the birth partner.</li>
+        </ul>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>Your body</h3><span class="dur">4:17</span></div>
+        <ul>
+          <li>UFO (upright with knees below hips, forward, open) can create up to 28% more space in the pelvis; studies link it to a shorter first stage, slightly shorter pushing, and fewer assisted births and episiotomies.</li>
+          <li>Use what the room has: stairs, stools, ropes; a birth ball sized so hips sit at least 10 cm above knees; a peanut ball between the knees when lying on your side.</li>
+          <li>After a caesarean, don't let people pull you up; stand using your own arms and legs (guide in Resources).</li>
+        </ul>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>Breathing</h3><span class="dur">5:38</span></div>
+        <ul>
+          <li>Up-breathing for first-stage surges, the caesarean anaesthetic, or a nervous partner: in through the nose for 4, out through the mouth for 8 (or 4 and 6; the out-breath must be longer). Five rounds is roughly one surge. If light-headed, slow the out-breath.</li>
+          <li>Down-breathing for pushing: a big breath in, then breathe out down towards the pelvic floor without holding it. Practise it on the loo.</li>
+        </ul>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>Informed choice</h3><span class="dur">1:23</span></div>
+        <p>The course covers every type of birth because people taught that one kind is "best" felt they'd failed when it didn't happen. Aim to have preferences for each scenario in the template.</p>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>Relaxations</h3><span class="dur">2:44</span></div>
+        <p>Practise regularly (before bed works) so a few words trigger calm in labour. "Anchors" such as stroking the arm, the same music each time, and the partner reading the scripts all become cues. MP3s and scripts are in Resources.</p>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>Trusted team</h3><span class="dur">0:49</span></div>
+        <p>Check how many birth partners your unit allows; a doula is an option for extra or alternative support.</p>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>Home comforts</h3><span class="dur">3:09</span></div>
+        <p>Interruptions and questions switch on the "thinking" brain and can slow things down. Plan by sense: dim lights or battery candles (a lamp, not the main lights); who's in the room; 6+ hours of playlists; slow-release snacks and flat energy drinks if you're allowed to eat; room spray or oils (check first); your own pillow, blanket and nightie; massage.</p>
+      </article>
+
+      <article class="vid">
+        <div class="vid-head"><h3>How to practice</h3><span class="dur">0:38</span></div>
+        <p>Pick the parts that suit you; there's a practice schedule in Resources.</p>
+      </article>
+    </section>
+
+    <section id="comfort" aria-labelledby="comfort-h">
+      <p class="eyebrow">Week two · 10:39 video</p>
+      <h2 id="comfort-h">Ten ways to keep comfortable</h2>
+      <p class="sub">The comfort and pain-relief options from "Ten ways to keep comfortable in ten minutes", side by side.</p>
+
+      <div class="grid-head" aria-hidden="true"><span>Option</span><span>Upsides</span><span>Watch-outs</span></div>
+      <div class="rows">
+        <div class="row">
+          <div class="name">Positions (UFO, props)<br><span class="onset">Immediately</span></div>
+          <div><span class="lbl">Upsides</span>Anywhere; can shorten labour</div>
+          <div class="note"><span class="lbl">Watch-outs</span>Hard when tired</div>
+        </div>
+        <div class="row">
+          <div class="name">Breathing<br><span class="onset">Immediately</span></div>
+          <div><span class="lbl">Upsides</span>Calm and focus; any type of birth</div>
+          <div class="note"><span class="lbl">Watch-outs</span>Much better with practice</div>
+        </div>
+        <div class="row">
+          <div class="name">Water (pool, bath, shower)<br><span class="onset">Immediately</span></div>
+          <div><span class="lbl">Upsides</span>Weightless and calm; may shorten labour; works with gas and air</div>
+          <div class="note"><span class="lbl">Watch-outs</span>Not with an epidural or within about 2 hours of an opioid injection; can slow early labour; mixed evidence on tearing; pools are limited, so ask early</div>
+        </div>
+        <div class="row">
+          <div class="name">Aromatherapy<br><span class="onset">About 20 min</span></div>
+          <div><span class="lbl">Upsides</span>Relaxing; some oils ease nausea</div>
+          <div class="note"><span class="lbl">Watch-outs</span>Acts like a drug, so use with a midwife's guidance; some units don't allow diffusers (use a hanky)</div>
+        </div>
+        <div class="row">
+          <div class="name">Paracetamol<br><span class="onset">Up to 1 hour; lasts 4–5 hours</span></div>
+          <div><span class="lbl">Upsides</span>Takes the edge off early on</div>
+          <div class="note"><span class="lbl">Watch-outs</span>Weaker in active labour; log doses</div>
+        </div>
+        <div class="row">
+          <div class="name">TENS<br><span class="onset">20–30 min</span></div>
+          <div><span class="lbl">Upsides</span>You control it; usable at home and alongside other methods</div>
+          <div class="note"><span class="lbl">Watch-outs</span>Hire or buy; not in water; weaker later on; take spare pads and batteries</div>
+        </div>
+        <div class="row">
+          <div class="name">Water injections<br><span class="onset">Immediately</span></div>
+          <div><span class="lbl">Upsides</span>Very effective for lower-back pain; no effect on mobility, pushing or baby</div>
+          <div class="note"><span class="lbl">Watch-outs</span>About 30 seconds of bee-sting pain; not offered in most places, so ask in advance</div>
+        </div>
+        <div class="row">
+          <div class="name">Gas and air<br><span class="onset">15–20 seconds</span></div>
+          <div><span class="lbl">Upsides</span>On and off quickly; portable; no effect on baby</div>
+          <div class="note"><span class="lbl">Watch-outs</span>Light-headed; dry mouth (bring lip balm, ask for ice)</div>
+        </div>
+        <div class="row">
+          <div class="name">Opioids<br><span class="onset">About 30 min; remifentanil in minutes</span></div>
+          <div><span class="lbl">Upsides</span>Relaxing; lets you rest. Pethidine, diamorphine, Oramorph, or a remifentanil drip you control.</div>
+          <div class="note"><span class="lbl">Watch-outs</span>Nausea, drowsiness, rarely slowed breathing; given close to birth, baby may be drowsy or slow to feed; no pool for about 2 hours; remifentanil not everywhere</div>
+        </div>
+        <div class="row">
+          <div class="name">Epidural<br><span class="onset">About 40 min (20 to site, 20 to work)</span></div>
+          <div><span class="lbl">Upsides</span>Can remove sensation entirely; not linked to a longer first stage or more caesareans</div>
+          <div class="note"><span class="lbl">Watch-outs</span>Labour ward only; less mobile, so assisted birth rises by 4 in 100; low blood pressure, itching; headache about 1 in 100; temporary nerve damage about 1 in 1,000, permanent under 1 in 10,000; ask early</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="choices" class="choices" aria-labelledby="choices-h">
+      <h2 id="choices-h">Choices to make</h2>
+      <p class="sub">The decisions the videos flag, in the order you'd meet them. Your answers go in the course's Birth Preferences Template (Week one, Resources).</p>
+
+      <div class="grid-head" aria-hidden="true"><span>Decision</span><span>Options</span><span>Worth knowing</span></div>
+
+      <div class="stage">
+        <h3>Before labour</h3>
+        <div class="row">
+          <div class="name">Birth partner(s)</div>
+          <div>Partner, friend or relative, doula</div>
+          <div class="note">Check how many your unit allows</div>
+        </div>
+        <div class="row">
+          <div class="name">Planned caesarean by choice</div>
+          <div>Request one, or not</div>
+          <div class="note">Possible; a doctor will talk through your reasons</div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <h3>Around the due date</h3>
+        <div class="row">
+          <div class="name">Membrane sweep</div>
+          <div>Accept, decline, or ask them to stop</div>
+          <div class="note">Small benefit; best if the cervix is already softening</div>
+        </div>
+        <div class="row">
+          <div class="name">Induction (if offered, or past 41 weeks)</div>
+          <div>Accept, wait with extra monitoring, or caesarean</div>
+          <div class="note">See the NICE figures under <a href="#induction">Induction</a></div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <h3>In labour</h3>
+        <div class="row">
+          <div class="name">Baby's heart monitoring</div>
+          <div>Intermittent handheld, or continuous CTG (wireless or waterproof if available)</div>
+          <div class="note">Intermittent keeps you mobile</div>
+        </div>
+        <div class="row">
+          <div class="name">Vaginal exams</div>
+          <div>Accept, decline, or limit when and how often</div>
+          <div class="note">A snapshot only; tell the team if exams could be triggering</div>
+        </div>
+        <div class="row">
+          <div class="name">Comfort and pain relief</div>
+          <div>The <a href="#comfort">ten options above</a></div>
+          <div class="note">Say which to try first; ask early for a pool or an epidural</div>
+        </div>
+        <div class="row">
+          <div class="name">Environment and language</div>
+          <div>Lights, music, who's in the room, the words people use</div>
+          <div class="note">e.g. "comfortable?" not "in pain?"</div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <h3>Pushing</h3>
+        <div class="row">
+          <div class="name">Position and pushing</div>
+          <div>UFO or side-lying; follow your urge or be coached</div>
+          <div class="note">Works with an epidural too</div>
+        </div>
+        <div class="row">
+          <div class="name">Perineum</div>
+          <div>Warm compress, hands-on support, slow birth of the head; episiotomy only if needed</div>
+          <div class="note">Episiotomy isn't routine</div>
+        </div>
+        <div class="row">
+          <div class="name">If baby needs help out</div>
+          <div>Forceps, ventouse, or caesarean</div>
+          <div class="note">If you'd never want instruments, discuss it before labour</div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <h3>If it's a caesarean</h3>
+        <div class="row">
+          <div class="name">Gentle-caesarean elements</div>
+          <div>Music, lights, drape lowered, slow birth, skin-to-skin, partner trims the cord, photos</div>
+          <div class="note">Can be quicker if there's a concern</div>
+        </div>
+      </div>
+
+      <div class="stage after">
+        <h3>After the birth</h3>
+        <div class="row">
+          <div class="name">Cord clamping</div>
+          <div>Delayed (optimal) or immediate; who trims it</div>
+          <div class="note">Delay gives baby more blood and iron</div>
+        </div>
+        <div class="row">
+          <div class="name">Placenta delivery</div>
+          <div>Oxytocin injection or physiological</div>
+          <div class="note">Injection lowers heavy-bleeding risk; can cause nausea and cramps</div>
+        </div>
+        <div class="row">
+          <div class="name">Golden hour</div>
+          <div>Uninterrupted skin-to-skin and first feed; non-urgent checks delayed</div>
+          <div class="note">Encouraged after a caesarean too</div>
+        </div>
+        <div class="row">
+          <div class="name">Placenta and cord blood</div>
+          <div>Keep the placenta, collect cord blood, or neither</div>
+          <div class="note">Tell the midwife in advance</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Source: captions of the Week one and Week two videos in the <a href="https://happyparentshappybaby.teachable.com/courses/3032420/lectures/66882095">Happy Parents Happy Baby course</a>.</p>
+    <p>Personal notes, not medical advice. Figures are as quoted in the videos; check anything specific to you with your own midwife.</p>
+  </footer>
+</div>
+</body>
+</html>
